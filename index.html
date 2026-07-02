@@ -333,6 +333,44 @@
     .ex-msg { color: #fbbf24; }
     .ex-auto { color: #4ade80; }
 
+    /* ── PATCH NAV ── */
+    html { scroll-behavior: smooth; }
+    .patch-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+    }
+    .patch-nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 22px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #c084fc;
+      background: rgba(30,16,53,0.85);
+      border: 1px solid rgba(168,85,247,0.3);
+      backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
+    }
+    .patch-nav-link:hover {
+      border-color: #a855f7;
+      background: rgba(45,27,78,0.9);
+      transform: translateY(-1px);
+    }
+    .patch-nav-link.current {
+      background: linear-gradient(135deg, var(--purple-bright), var(--purple-glow));
+      color: #fff;
+      border-color: transparent;
+    }
+
     /* ── DIVIDER ── */
     .divider {
       height: 1px;
@@ -405,8 +443,68 @@
 ═══════════════════════════════════════════════ -->
 <main style="max-width:1100px;margin:0 auto;padding:60px 20px 80px;">
 
+  <!-- ─── PATCH QUICK-JUMP NAV ─── -->
+  <nav class="patch-nav">
+    <a href="#patch-1-1" class="patch-nav-link current">🟣 Patchnote 1.1</a>
+    <a href="#patch-1-0" class="patch-nav-link">🟣 Patchnote 1.0</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       PATCHNOTE 1.1 BETA
+  ═══════════════════════════════════════════════ -->
+
   <!-- PATCHNOTE HEADER -->
-  <div style="text-align:center;margin-bottom:48px;">
+  <div id="patch-1-1" style="text-align:center;margin-bottom:48px;scroll-margin-top:80px;">
+    <div style="margin-bottom:12px;">
+      <span class="patchnote-badge">Patchnote 1.1 beta</span>
+    </div>
+    <h1 class="section-title" style="font-size:2.4rem;">Чат и паспорта стали удобнее</h1>
+    <p style="color:#9d7dc8;max-width:560px;margin:14px auto 0;line-height:1.7;">
+      Мы прислушались к тестерам и доработали то, что раньше работало не так, как задумано.
+      Новых команд в этом патче нет — просто всё стало удобнее и стабильнее.
+    </p>
+  </div>
+
+  <!-- ─── FEATURES 1.1 ─── -->
+  <section style="margin-bottom:60px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:28px;">
+
+      <!-- Чат -->
+      <div class="feature-card">
+        <div class="fc-title">💬 Чат</div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Теперь можно выбирать, кто услышит твоё сообщение</p>
+        <div class="fc-item">Обычное сообщение слышно только тем, кто рядом (локальный чат)</div>
+        <div class="fc-item">Восклицательный знак в начале сообщения — и его услышит весь сервер</div>
+        <div class="fc-item">Бабл-сообщения над головой висят на правильной высоте, а не улетают вверх</div>
+      </div>
+
+      <!-- Паспорта -->
+      <div class="feature-card">
+        <div class="fc-title">📋 Паспорта</div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Починили команду показа паспорта</p>
+        <div class="fc-item">Показ паспорта теперь правильно предлагает показать твой паспорт другому игроку</div>
+        <div class="fc-item">Раньше команда по ошибке показывала тебе паспорт другого игрока - теперь это исправлено и работает правильно!</div>
+      </div>
+
+      <!-- Города -->
+      <div class="feature-card">
+        <div class="fc-title">🏙️ Города</div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Стало проще понять, что происходит с закрытым городом</p>
+        <div class="fc-item">Наведи курсор на надпись «ЗАКРЫТ» — увидишь время и причину закрытия</div>
+        <div class="fc-item">Больше не нужно спрашивать мэра или гадать в чате</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       PATCHNOTE 1.0 BETA (архив)
+  ═══════════════════════════════════════════════ -->
+
+  <!-- PATCHNOTE HEADER -->
+  <div id="patch-1-0" style="text-align:center;margin-bottom:48px;scroll-margin-top:80px;">
     <div style="margin-bottom:12px;">
       <span class="patchnote-badge">Patchnote 1.0 beta</span>
     </div>
@@ -593,7 +691,7 @@
       </div>
       <div style="text-align:left;">
         <div style="font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,#c084fc,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">QWorld</div>
-        <div style="font-size:0.82rem;color:#6b4f8a;">Minecraft SMP RP Server • v1.0 beta</div>
+        <div style="font-size:0.82rem;color:#6b4f8a;">Minecraft SMP RP Server • v1.1 beta</div>
       </div>
     </div>
     <a href="https://t.me/qworld_s" target="_blank" class="tg-btn" style="font-size:0.9rem;padding:10px 24px;">
@@ -633,7 +731,7 @@
     { cmd: '/city list', args: '', role: 'player', desc: 'Список всех жителей с ролями' },
     { cmd: '/city leave', args: '', role: 'player', desc: 'Запрос на выход из города (требует подтверждения мэра)' },
     { cmd: '/passport', args: '', role: 'all', desc: 'Показать свой паспорт' },
-    { cmd: '/passport show', args: '<ник>', role: 'all', desc: 'Показать паспорт другого игрока' },
+    { cmd: '/passport show', args: '<ник>', role: 'all', desc: 'Показать паспорт другому игроку' },
     { cmd: '/passport setgender', args: '<м/ж>', role: 'all', desc: 'Указать пол (только один раз)' },
     { cmd: '/passport history', args: '', role: 'all', desc: 'Показать записи в паспорте' },
     { cmd: '/passport compare', args: '<ник>', role: 'all', desc: 'Сравнить свой паспорт с другим' },
@@ -679,6 +777,14 @@
     document.getElementById('tab-' + tab).classList.add('active');
     btn.classList.add('active');
   }
+
+  // ── PATCH NAV ACTIVE STATE ──
+  document.querySelectorAll('.patch-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.patch-nav-link').forEach(l => l.classList.remove('current'));
+      link.classList.add('current');
+    });
+  });
 </script>
 
 </body>
