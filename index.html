@@ -445,10 +445,185 @@
 
   <!-- ─── PATCH QUICK-JUMP NAV ─── -->
   <nav class="patch-nav">
-    <a href="#patch-1-2" class="patch-nav-link current">🟣 Patchnote 1.2</a>
-    <a href="#patch-1-1" class="patch-nav-link">🟣 Patchnote 1.1</a>
-    <a href="#patch-1-0" class="patch-nav-link">🟣 Patchnote 1.0</a>
+    <a href="#patch-1-0-release" class="patch-nav-link current">🟣 Patchnote 1.0</a>
+    <a href="#patch-1-2" class="patch-nav-link">🟣 Patchnote 1.2 beta</a>
+    <a href="#patch-1-1" class="patch-nav-link">🟣 Patchnote 1.1 beta</a>
+    <a href="#patch-1-0" class="patch-nav-link">🟣 Patchnote 1.0 beta</a>
   </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       PATCHNOTE 1.0 — RELEASE (вышли из беты)
+  ═══════════════════════════════════════════════ -->
+
+  <!-- PATCHNOTE HEADER -->
+  <div id="patch-1-0-release" style="text-align:center;margin-bottom:48px;scroll-margin-top:80px;">
+    <div style="margin-bottom:12px;">
+      <span class="patchnote-badge" style="background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#2d1b00;">Patchnote 1.0 — Релиз (ну почти)</span>
+    </div>
+    <h1 class="section-title" style="font-size:2.4rem;">Мы вышли из беты</h1>
+    <p style="color:#9d7dc8;max-width:640px;margin:14px auto 0;line-height:1.7;">
+      Плагин официально покидает бета-стадию. В этом обновлении — система могил на смерть,
+      приглашения в город от мэра, и куча незаметной, но важной работы под капотом, включая
+      исправление бага с пропадающими легендами и записями городов. Миры для ферм уже в разработке
+      и появятся в одном из следующих обновлений.
+    </p>
+  </div>
+
+  <!-- ─── FEATURES 1.0 RELEASE ─── -->
+  <section style="margin-bottom:60px;">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:28px;">
+
+      <!-- Могилы -->
+      <div class="feature-card">
+        <div class="fc-title">⚰️ Могилы</div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Смерть больше не значит потерю всех вещей навсегда</p>
+        <div class="fc-item">На месте смерти появляется могила с вещами и надписью, кто и как умер</div>
+        <div class="fc-item">Можно выдать доверенным друзьям право забирать твою могилу</div>
+        <div class="fc-item">Одновременно у игрока может быть до 3 активных могил</div>
+        <div class="fc-item">Защита от фарма смертей: слишком частые смерти подряд — кик, а не спам могилами</div>
+      </div>
+
+      <!-- Миры ферм -->
+      <div class="feature-card" style="opacity:0.8;">
+        <div class="fc-title">🌾 Миры ферм <span style="font-size:0.7rem;font-weight:700;color:#fbbf24;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:2px 10px;margin-left:6px;vertical-align:middle;">В разработке</span></div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Отдельные миры для фарма уже в работе, но пока не готовы к релизу</p>
+        <div class="fc-item">Меньше нагрузки на сервер: фермы — это много тикающих сущностей и редстоуна, а отдельный мир снимает эту нагрузку с основного</div>
+        <div class="fc-item">В основном мире больше не будет громоздких мобных и растительных ферм и постоянного шума от них рядом с постройками — всё это переедет в мир ферм</div>
+        <div class="fc-item">Порталы из плачущего обсидиана прямо на основном мире</div>
+        <div class="fc-item">Следите за новостями — расскажем, когда всё будет готово</div>
+      </div>
+
+      <!-- Приглашения в город -->
+      <div class="feature-card">
+        <div class="fc-title">📨 Приглашения в город</div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Теперь мэр тоже может звать игроков к себе, а не только наоборот</p>
+        <div class="fc-item">Мэр или зам-мэр приглашает конкретного игрока — тот принимает или отклоняет</div>
+        <div class="fc-item">Список всех входящих приглашений в одной команде</div>
+        <div class="fc-item">Отдельно осталась и старая механика: игрок сам подаёт заявку на вступление</div>
+      </div>
+
+      <!-- Координаты города -->
+      <div class="feature-card">
+        <div class="fc-title">📍 Координаты города</div>
+        <p style="font-size:0.8rem;color:#9d7dc8;margin-bottom:14px;">Больше не нужно спрашивать у мэра дорогу в чате</p>
+        <div class="fc-item">Мэр задаёт координаты города в верхнем мире и в аду</div>
+        <div class="fc-item">Координаты видно всем в /city info</div>
+      </div>
+
+    </div>
+
+    <!-- Extra features -->
+    <div style="margin-bottom:8px;">
+      <p style="font-size:1rem;font-weight:600;color:#9d7dc8;margin-bottom:16px;text-align:center;">Стабильность и мелкие правки</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;">
+      <div class="extra-feat"><span class="ef-icon">🐛</span><div><div class="ef-title">Пропадавшие легенды</div><div class="ef-desc">Нашли и исправили редкий баг, из-за которого свежедобавленная легенда или запись города могла не сохраниться на диск</div></div></div>
+      <div class="extra-feat"><span class="ef-icon">🔔</span><div><div class="ef-title">Кликабельные уведомления</div><div class="ef-desc">Приглашение от мэра прилетает прямо в чат кнопками [Принять] и [Отклонить]</div></div></div>
+      <div class="extra-feat"><span class="ef-icon">🗺️</span><div><div class="ef-title">Заявка и приглашение — раздельно</div><div class="ef-desc">/city join — твоя заявка в город, /city invite — приглашение от мэра тебе. Больше не путаются друг с другом</div></div></div>
+      <div class="extra-feat"><span class="ef-icon">🚫</span><div><div class="ef-title">Чёрный список города</div><div class="ef-desc">Список забаненных в городе игроков теперь виден в /city info</div></div></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── SCREENSHOTS 1.0 RELEASE ─── -->
+  <section style="margin-bottom:60px;">
+    <div style="text-align:center;margin-bottom:32px;">
+      <h2 style="font-size:1.6rem;font-weight:800;color:#c084fc;margin-bottom:6px;">🖼️ Как это выглядит в игре</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+
+      <div class="card" style="text-align:center;">
+        <img src="grave.png" alt="Могила игрока" style="max-width:100%;border-radius:12px;display:block;margin:0 auto 14px;"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <div style="display:none;font-size:0.8rem;color:#6b4f8a;margin-bottom:14px;">grave.png</div>
+        <p style="font-size:0.85rem;color:#c4b5e8;">Могила на месте смерти</p>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <img src="cityinvite.png" alt="Приглашение в город" style="max-width:100%;border-radius:12px;display:block;margin:0 auto 14px;"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+        <div style="display:none;font-size:0.8rem;color:#6b4f8a;margin-bottom:14px;">cityinvite.png</div>
+        <p style="font-size:0.85rem;color:#c4b5e8;">Приглашение в город от мэра</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── NEW COMMANDS IN THIS PATCH ─── -->
+  <section style="margin-bottom:60px;">
+    <div style="text-align:center;margin-bottom:24px;">
+      <h2 style="font-size:1.3rem;font-weight:800;color:#c084fc;margin-bottom:6px;">✨ Новые команды в этом патче</h2>
+    </div>
+    <div class="card" style="max-width:760px;margin:0 auto;">
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/grave list</div>
+          <div class="cmd-desc">Список своих активных могил</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/grave trust<span class="arg"> <ник></span></div>
+          <div class="cmd-desc">Разрешить игроку забирать твои могилы</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/grave untrust<span class="arg"> <ник></span></div>
+          <div class="cmd-desc">Забрать разрешение забирать твои могилы</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/grave trusted</div>
+          <div class="cmd-desc">Список тех, кому доверены твои могилы</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/city invite<span class="arg"> <ник></span></div>
+          <div class="cmd-desc">Мэр приглашает конкретного игрока в свой город</div>
+        </div>
+        <span class="role-badge role-mayor">🟡 Мэр</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/city invite-accept<span class="arg"> <город></span> / <span class="cmd-code" style="display:inline;">invite-deny</span></div>
+          <div class="cmd-desc">Принять или отклонить приглашение от мэра</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/city invites</div>
+          <div class="cmd-desc">Список приглашений, которые тебе прислали</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/city join<span class="arg"> <город></span></div>
+          <div class="cmd-desc">Подать заявку на вступление в город (раньше — /city invite)</div>
+        </div>
+        <span class="role-badge role-all">🔵 Все</span>
+      </div>
+      <div class="cmd-row">
+        <div>
+          <div class="cmd-code">/city coords set<span class="arg"> <overworld|nether></span></div>
+          <div class="cmd-desc">Задать координаты города своей текущей позицией</div>
+        </div>
+        <span class="role-badge role-mayor">🟡 Мэр</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
 
   <!-- ═══════════════════════════════════════════════
        PATCHNOTE 1.2 BETA
@@ -945,7 +1120,7 @@
       </div>
       <div style="text-align:left;">
         <div style="font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,#c084fc,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">QWorld</div>
-        <div style="font-size:0.82rem;color:#6b4f8a;">Minecraft SMP RP Server • v1.2 beta</div>
+        <div style="font-size:0.82rem;color:#6b4f8a;">Minecraft SMP RP Server • v1.0</div>
       </div>
     </div>
     <a href="https://t.me/qworld_s" target="_blank" class="tg-btn" style="font-size:0.9rem;padding:10px 24px;">
@@ -977,6 +1152,8 @@
     { cmd: '/city whitelist', args: '<add/remove> <ник>', role: 'mayor', desc: 'Белый список для закрытого города' },
     { cmd: '/city zone', args: '<close/open> <зона>', role: 'mayor', desc: 'Закрыть или открыть отдельный район города' },
     { cmd: '/city log', args: '', role: 'mayor', desc: 'Журнал последних закрытий города' },
+    { cmd: '/city invite', args: '<ник>', role: 'mayor', desc: 'Пригласить конкретного игрока в свой город' },
+    { cmd: '/city coords set', args: '<overworld|nether>', role: 'mayor', desc: 'Задать координаты города своей позицией' },
     { cmd: '/laws', args: '<город> add <текст>', role: 'mayor', desc: 'Добавить закон в конституцию города' },
     { cmd: '/laws', args: '<город> remove <номер>', role: 'mayor', desc: 'Удалить закон по номеру' },
     { cmd: '/laws', args: '<город> clear', role: 'mayor', desc: 'Очистить все законы города' },
@@ -985,7 +1162,10 @@
   const playerCmds = [
     { cmd: '/city cities', args: '', role: 'all', desc: 'Список всех городов сервера с кнопками запроса' },
     { cmd: '/city info', args: '[город]', role: 'all', desc: 'Информация о городе' },
-    { cmd: '/city invite', args: '<ник>', role: 'all', desc: 'Отправить запрос на вступление в город игрока' },
+    { cmd: '/city join', args: '<город>', role: 'all', desc: 'Отправить запрос на вступление в город' },
+    { cmd: '/city invites', args: '', role: 'all', desc: 'Приглашения в города, которые тебе прислали' },
+    { cmd: '/city invite-accept', args: '<город>', role: 'all', desc: 'Принять приглашение мэра' },
+    { cmd: '/city invite-deny', args: '<город>', role: 'all', desc: 'Отклонить приглашение мэра' },
     { cmd: '/city online', args: '', role: 'player', desc: 'Кто из города онлайн' },
     { cmd: '/city count', args: '', role: 'player', desc: 'Сколько людей в городе' },
     { cmd: '/city list', args: '', role: 'player', desc: 'Список всех жителей с ролями' },
@@ -1008,6 +1188,10 @@
     { cmd: '/rep city', args: '<город> [+/-]', role: 'all', desc: 'Посмотреть или изменить репутацию города' },
     { cmd: '/rep top', args: '', role: 'all', desc: 'Топ-5 игроков по репутации' },
     { cmd: '/rep topcities', args: '', role: 'all', desc: 'Топ-5 городов по репутации' },
+    { cmd: '/grave list', args: '', role: 'all', desc: 'Список своих активных могил' },
+    { cmd: '/grave trust', args: '<ник>', role: 'all', desc: 'Разрешить игроку забирать твои могилы' },
+    { cmd: '/grave untrust', args: '<ник>', role: 'all', desc: 'Забрать разрешение забирать твои могилы' },
+    { cmd: '/grave trusted', args: '', role: 'all', desc: 'Список тех, кому доверены твои могилы' },
   ];
 
   const roleBadge = {
